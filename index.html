@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+================================================================
+株式会社Radia ブランドサイト デザイン案（9/26 house style 版）
+  コンセプト：「放射 ― ひとつの中心から、光を遠くへ」
+    社名「Radia」を、ラテン語由来の radiate（光を放つ）・radial（中心から放射状に）と重ねて読みました。
+    伝えたい魅力という「中心」をはっきりさせ、そこから広告・Webサイト・デザインという
+    三本の光を同じ方向へ放つ。それが一社で三つを担うRadiaの仕事のかたちです。
+    ・ヒーロー：円い窓（額装）の中で、中心から三色の光線が伸びていくCanvas（額装型）
+    ・右端のスクロールレール：読み進めるほど光線が増えていく小さな放射のしるしと角度の読み取り
+    ・配色：夜の菫色を地に、菫・薄紅・淡金の三色（広告・Web・デザイン）
+    ※所在地・地名など土地から着想した要素、代表者の氏名から着想した要素は採用していません。
+  デプロイ：Cloudflare Pages（Direct Upload）にこのファイルをそのままアップロード。
+            ビルド不要。外部依存は Google Fonts と Unsplash 画像のみ。
+
+  ■ 公開前の確認事項（チェックリスト）
+  【確認事項】1. 社名「Radia」を「放射（radiate）」に重ねた解釈はデザイン上のものです（由来とは断定していません）
+  【確認事項】2. キャッチコピー「魅力を、遠くまで放つ。」は仮案です
+  【確認事項】3. ロゴは仮デザインです（放射のしるし＋Radiaの文字）
+  【確認事項】4. 「社名のこと」「事業内容」「進め方」の文章は、CSVの事業内容を膨らませた仮文です
+  【確認事項】5. 対応している広告媒体・制作実績・取引先はCSVに無いため記載していません
+  【確認事項】6. 紹介広告で成果表現（「売上○倍」等）を使う場合は景品表示法（優良誤認・ステルスマーケティング規制）にご注意ください
+  【確認事項】7. 英字の小見出し（Advertising ほか）は仮の英文です
+  【確認事項】8. 代表者の役職は「代表取締役」と仮置き。代表メッセージは草案です。ご本人の確認・修正を経て公開してください
+  【確認事項】9. 郵便番号はCSVの値を補っています
+  【確認事項】10. 画像はUnsplashのフリー素材（仮）。photo-1561070791-2526d30994b5 / photo-1551288049-bebda4e38f71 / photo-1572044162444-ad60f128bdea / photo-1561070791-36c11767b26a。自社の制作物写真への差し替え推奨
+  【確認事項】11. 設立・資本金・従業員数はCSVに無いため未掲載（会社概要にコメントで行を用意）
+  【確認事項】12. OGP画像・favicon・公開URL
+================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>株式会社Radia｜広告マーケティング・Webサイト制作・グラフィックデザイン</title>
+<meta name="description" content="株式会社Radiaは、紹介広告・インターネットマーケティング支援、Webサイトの企画・制作・運営、ロゴやパッケージのグラフィックデザインを一社で手がけます。">
+<meta property="og:title" content="株式会社Radia｜広告マーケティング・Webサイト制作・グラフィックデザイン">
+<meta property="og:description" content="株式会社Radiaは、紹介広告・インターネットマーケティング支援、Webサイトの企画・制作・運営、ロゴやパッケージのグラフィックデザインを一社で手がけます。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<!-- 【確認事項】og:url / og:image は公開ドメイン確定後に設定してください -->
+<meta name="theme-color" content="#141220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141220'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23A08BFF'/%3E%3Cpath d='M16 9V4M16 28v-5M9 16H4M28 16h-5' stroke='%23A08BFF' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M11 11L7.5 7.5M24.5 24.5L21 21' stroke='%23EE8FB4' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M21 11l3.5-3.5M7.5 24.5L11 21' stroke='%23EFD08C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;1,400&family=Shippori+Mincho+B1:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#141220;      /* 夜の菫 */
+  --base-2:#1C1830;
+  --base-deep:#0F0D18;
+  --text:#EEEAF6;
+  --mute:#9D97B5;
+  --accent:#A08BFF;    /* 菫の光（広告） */
+  --rose:#EE8FB4;      /* 薄紅の光（Web） */
+  --gold:#EFD08C;      /* 淡金の光（デザイン） */
+  --line:rgba(238,234,246,.14);
+  --hd-bg:rgba(20,18,32,.86);
+  --menu-bg:rgba(15,13,24,.97);
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --latin:"Bodoni Moda","Didot","Times New Roman",serif;
+  --num:"Bodoni Moda","Didot","Times New Roman",serif;
+  --hh:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.92;letter-spacing:.04em;word-break:auto-phrase;text-wrap:pretty;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.nw{display:inline-block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--accent);color:var(--base);padding:10px 16px;text-decoration:none;font-weight:700}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1160px,100% - 48px);margin:0 auto}
+.sec{position:relative;padding:clamp(96px,14vw,176px) 0}
+/* header */
+.hd{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
+.hd.is-scrolled{background:var(--hd-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
+.hd__in{height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1240px,100% - 40px);margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{width:32px;height:32px;flex:none}
+.logo__name{font-family:var(--serif);font-weight:600;font-size:17px;letter-spacing:.14em;line-height:1.25;white-space:nowrap}
+.logo__name small{display:block;font-family:var(--sans);font-weight:400;font-size:10.5px;letter-spacing:.18em;color:var(--mute)}
+.gnav ul{display:flex;gap:clamp(18px,2.2vw,34px)}
+.gnav a{position:relative;display:block;padding:6px 0;text-decoration:none;font-size:13.5px;letter-spacing:.13em}
+.gnav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.gnav a:hover::after,.gnav a:focus-visible::after,.gnav a[aria-current="true"]::after{transform:scaleX(1)}
+.menu-btn{display:none;position:relative;width:44px;height:44px;background:none;border:0;color:var(--text);cursor:pointer;flex:none}
+.menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* hero shared */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.hero canvas.full{position:absolute;inset:0;width:100%;height:100%;display:block}
+.js .hero [data-in]{opacity:0;transform:translateY(-14px);transition:opacity 1.3s cubic-bezier(.22,.7,.2,1),transform 1.3s cubic-bezier(.22,.7,.2,1)}
+.js .is-loaded .hero [data-in]{opacity:1;transform:none}
+.is-loaded .hero [data-in="2"]{transition-delay:.4s}
+.is-loaded .hero [data-in="3"]{transition-delay:.9s}
+.is-loaded .hero [data-in="4"]{transition-delay:1.3s}
+.cue{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));width:1px;height:54px;background:var(--line);overflow:hidden;z-index:3}
+.cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--text);animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{to{top:100%}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity 1.1s cubic-bezier(.22,.7,.2,1),transform 1.1s cubic-bezier(.22,.7,.2,1)}
+.js .rv.is-in{opacity:1;transform:none}
+.js .rv-d1{transition-delay:.15s}.js .rv-d2{transition-delay:.3s}
+/* draw figures */
+.fig{width:100%;height:auto;overflow:visible}
+.fig .ln{fill:none;stroke:var(--accent);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.js .fig .ln{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.45,.05,.2,1) .3s}
+.js .fig .ln.d2{transition-delay:.9s}.js .fig .ln.d3{transition-delay:1.5s}.js .fig .ln.d4{transition-delay:2.1s}
+.js .fig.is-drawn .ln{stroke-dashoffset:0}
+.js .fig .pop{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .8s 1.4s,transform .8s cubic-bezier(.3,1.6,.5,1) 1.4s}
+.js .fig .lbl{opacity:0;transition:opacity 1s 1.9s}
+.js .fig.is-drawn .pop{opacity:1;transform:none}
+.js .fig.is-drawn .lbl{opacity:1}
+.fig text{font-family:var(--sans);fill:var(--text);letter-spacing:.12em}
+/* sections */
+.lead-l{font-family:var(--serif);font-size:clamp(20px,2.3vw,28px);line-height:1.85;letter-spacing:.1em}
+.p-mute{color:var(--mute)}
+.two{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--base-2),var(--base))}
+.ph img{width:100%;height:100%;object-fit:cover}
+/* business rows */
+.biz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.biz + .biz{margin-top:clamp(72px,10vw,128px)}
+.biz:nth-of-type(even) .biz__media{order:2}
+.biz__media{aspect-ratio:4/3}
+.biz__media img{filter:saturate(.78) contrast(1.03);transition:transform 1.4s cubic-bezier(.22,.7,.2,1)}
+.biz:hover .biz__media img{transform:scale(1.035)}
+.biz__kind{font-size:13px;letter-spacing:.16em;color:var(--accent);margin-bottom:12px}
+.biz h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.5vw,30px);letter-spacing:.1em;line-height:1.6;margin-bottom:18px}
+.biz p{max-width:30em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:12.5px;letter-spacing:.08em}
+/* band */
+.band{position:relative;height:clamp(280px,44vw,540px);overflow:hidden;background:var(--base-2)}
+.band .ph{position:absolute;inset:0}
+.band img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;filter:saturate(.7) brightness(.66);will-change:transform}
+.band__cap{position:absolute;left:0;right:0;bottom:clamp(28px,6vw,64px);z-index:2;text-align:center;font-family:var(--serif);font-size:clamp(20px,3vw,34px);letter-spacing:.2em;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.45);padding:0 20px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:clamp(16px,2.4vw,32px);position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--line)}
+.steps::after{content:"";position:absolute;left:0;top:11px;height:1px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
+.js .steps::after{transition:transform 2.4s cubic-bezier(.6,.1,.2,1)}
+.steps.is-in::after,html:not(.js) .steps::after{transform:scaleX(1)}
+.step{position:relative;padding-top:46px}
+.step__dot{position:absolute;left:0;top:0;width:23px;height:23px;border-radius:50%;border:1px solid var(--mute);background:var(--base);display:grid;place-items:center}
+.step__dot::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.steps.is-in .step__dot::after,html:not(.js) .step__dot::after{transform:scale(1)}
+.steps.is-in .step:nth-child(2) .step__dot::after{transition-delay:.6s}
+.steps.is-in .step:nth-child(3) .step__dot::after{transition-delay:1.2s}
+.steps.is-in .step:nth-child(4) .step__dot::after{transition-delay:1.8s}
+.steps.is-in .step:nth-child(5) .step__dot::after{transition-delay:2.3s}
+.step__no{font-family:var(--num);font-size:13px;color:var(--accent);letter-spacing:.12em}
+.step h3{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.14em;margin:6px 0 10px}
+.step p{font-size:14.5px;color:var(--mute);line-height:1.85}
+.loop-note{display:flex;align-items:center;gap:10px;margin-top:40px;color:var(--mute);font-size:14px;letter-spacing:.1em}
+.loop-note svg{width:22px;height:22px;fill:none;stroke:var(--accent);stroke-width:1.4}
+/* values */
+.vals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.vals li{padding:36px clamp(16px,2.6vw,36px) 8px;border-left:1px solid var(--line)}
+.vals li:first-child{border-left:0;padding-left:0}
+.vals h3{font-family:var(--serif);font-weight:600;font-size:clamp(19px,1.9vw,23px);letter-spacing:.12em;margin-bottom:12px}
+.vals p{font-size:15px;color:var(--mute)}
+/* message */
+.msg{display:flex;flex-direction:row-reverse;gap:clamp(40px,6vw,90px);justify-content:center;align-items:flex-start}
+.msg__title{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:.2em;line-height:1.7;flex:none}
+.msg__body{writing-mode:vertical-rl;font-family:var(--serif);font-size:16px;line-height:2.3;letter-spacing:.14em;height:30em;max-width:100%;overflow-x:auto}
+.msg__body p{margin:0 0 0 1.6em}
+.msg__body p.first{font-size:1.3rem}
+.msg__sign{text-align:end;font-size:15px;letter-spacing:.2em;padding-top:2em}
+.msg__sign small{display:block;font-size:13px;color:var(--mute)}
+/* profile */
+.co{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,6vw,90px);align-items:start}
+.profile{border-top:1px solid var(--line)}
+.profile > div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.profile dt{color:var(--mute);font-size:14px;letter-spacing:.14em}
+.profile dd{margin:0}
+.profile dd li{position:relative;padding-left:1.1em}
+.profile dd li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:6px;background:var(--accent);border-radius:var(--bullet-r,50%)}
+/* footer */
+.ft{padding:72px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--base-deep)}
+.ft__in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}
+.ft__tag{font-family:var(--serif);font-size:clamp(17px,1.8vw,22px);letter-spacing:.18em;margin-top:18px}
+.ft nav ul{display:flex;flex-wrap:wrap;gap:10px 26px}
+.ft nav a{font-size:12.5px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
+.ft nav a:hover{color:var(--text)}
+.copy{margin-top:40px;font-family:var(--latin);font-size:13px;letter-spacing:.1em;color:var(--mute)}
+/* rail shared */
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);height:52vh;width:28px;z-index:90;pointer-events:none}
+.rail__line{position:absolute;left:13px;top:0;bottom:0;width:1px;background:var(--line)}
+.rail__fill{position:absolute;left:13px;top:0;width:1px;height:100%;background:var(--accent);transform-origin:top;transform:scaleY(0)}
+.rail__tick{position:absolute;left:9px;width:9px;height:1px;background:var(--line);transition:width .4s,background .4s,left .4s}
+.rail__tick.is-passed{left:8px;width:11px;background:var(--accent)}
+.rail__read{position:absolute;left:8px;top:0;margin-top:18px;writing-mode:vertical-rl;font-family:var(--num);font-size:11px;line-height:1;color:var(--mute);letter-spacing:.1em;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media (max-width:900px){
+  .menu-btn{display:block;z-index:120}
+  .gnav{position:fixed;inset:0;background:var(--menu-bg);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;z-index:110}
+  .gnav.is-open{opacity:1;visibility:visible}
+  .gnav ul{flex-direction:column;align-items:center;gap:26px}
+  .gnav a{font-family:var(--serif);font-size:20px}
+  .two,.biz,.co{grid-template-columns:minmax(0,1fr)}
+  .biz:nth-of-type(even) .biz__media{order:0}
+  .steps{grid-template-columns:minmax(0,1fr);gap:0;padding-left:44px}
+  .steps::before,.steps::after{left:11px;right:auto;top:10px;bottom:10px;width:1px;height:auto}
+  .steps::after{transform:scaleY(0);transform-origin:top}
+  .steps.is-in::after,html:not(.js) .steps::after{transform:scaleY(1)}
+  .step{padding:0 0 34px}
+  .step__dot{left:-44px}
+  .vals{grid-template-columns:minmax(0,1fr)}
+  .vals li{border-left:0;padding:28px 0 4px;border-bottom:1px solid var(--line)}
+  .msg{flex-direction:column;gap:30px}
+  .msg__title,.msg__body{writing-mode:horizontal-tb;height:auto}
+  .msg__body{line-height:2.1;letter-spacing:.06em}
+  .msg__body p{margin:0 0 1.4em}
+  .msg__sign{text-align:right;padding-top:0}
+  .rail{right:6px;height:36vh;width:20px}
+  .rail__read{display:none}
+}
+@media (max-width:640px){
+  :root{--hh:64px}
+  .profile > div{grid-template-columns:minmax(0,1fr);gap:4px}
+  body{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .hero [data-in]{opacity:1;transform:none}
+  .js .fig .ln{stroke-dashoffset:0}.js .fig .pop,.js .fig .lbl{opacity:1;transform:none}
+  .steps::after{transform:none!important}.step__dot::after{transform:scale(1)!important}
+}
+/* ===== site ===== */
+/* heading: big italic Didone + small JA */
+.sh{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 20px;margin-bottom:clamp(40px,6vw,72px)}
+.sh__en{font-family:var(--latin);font-style:italic;font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1;color:var(--text)}
+.sh__en::first-letter{color:var(--accent)}
+.sh__ja{font-family:var(--serif);font-weight:500;font-size:15px;letter-spacing:.22em;color:var(--accent)}
+/* hero D: disc + rays list + vertical title */
+.hero{background:radial-gradient(70% 60% at 30% 50%,#221c3c 0%,var(--base) 60%,var(--base-deep) 100%);display:grid;place-items:center;padding:calc(var(--hh) + 30px) 0 80px}
+.hero__grid{width:min(1140px,100% - 160px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) auto;gap:clamp(28px,5vw,72px);align-items:center}
+.disc{position:relative;aspect-ratio:1;width:100%;max-width:520px;border-radius:50%;overflow:hidden;background:#0c0a14;box-shadow:0 0 0 1px var(--line),0 0 0 18px rgba(160,139,255,.04),0 40px 80px -40px rgba(0,0,0,.8)}
+.disc canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.disc__ring{position:absolute;inset:-26px;border-radius:50%;border:1px dashed rgba(238,234,246,.16);pointer-events:none}
+.hero__side{align-self:end}
+.hero__en{font-family:var(--latin);font-style:italic;font-size:22px;margin-bottom:12px}
+.hero__side p.t{font-size:15px;color:#cdc8de;max-width:24em}
+.rays{margin-top:28px;border-top:1px solid var(--line)}
+.rays a{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:14.5px;letter-spacing:.12em;transition:padding .4s}
+.rays a:hover{padding-left:.5rem}
+.rays i{width:34px;height:1.5px;background:var(--c);box-shadow:0 0 10px var(--c)}
+.hero__title{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.2vw,56px);letter-spacing:.22em;line-height:1.6}
+.hero__title span{display:block}
+.hero__title span+span{padding-top:1.8em}
+/* concept */
+.statement{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.85;letter-spacing:.1em;margin-bottom:26px}
+.etym{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 22px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.etym dt{font-family:var(--latin);font-style:italic;font-size:24px;color:var(--accent)}
+.etym dd{margin:0;color:var(--mute);font-size:14.5px;align-self:center}
+.fig--rad .r1{stroke:var(--accent)}.fig--rad .r2{stroke:var(--rose)}.fig--rad .r3{stroke:var(--gold)}
+.fig--rad .core{fill:var(--text)}
+.fig--rad .halo{fill:none;stroke:var(--line)}
+.fig--rad text{font-size:14px}
+.fig--rad .c1{fill:var(--accent)}.fig--rad .c2{fill:var(--rose)}.fig--rad .c3{fill:var(--gold)}
+/* business */
+.bizsec{background:var(--base-2)}
+.biz__media{aspect-ratio:4/5;max-height:560px;border-radius:260px 260px 2px 2px}
+.biz__media::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,transparent 40%,rgba(20,18,32,.45));pointer-events:none}
+.ph.is-fallback{background:repeating-conic-gradient(from 0deg at 50% 0%,rgba(160,139,255,.18) 0 4deg,transparent 4deg 16deg),var(--base)}
+.biz__kind{display:flex;align-items:center;gap:12px;color:var(--c)}
+.biz__kind::before{content:"";width:30px;height:1.5px;background:var(--c)}
+.biz__en{font-family:var(--latin);font-style:italic;font-size:17px;color:var(--mute);margin:-10px 0 14px}
+/* process */
+.step__no{font-style:italic;font-size:22px}
+/* message */
+.msgsec{background:radial-gradient(60% 50% at 70% 40%,rgba(160,139,255,.10),transparent 70%),var(--base)}
+.cosec{background:var(--base-deep)}
+.profile dd li::before{transform:rotate(45deg);border-radius:0}
+/* rail: radiant mark */
+.rail__mark{position:absolute;left:-1px;top:0;width:30px;height:30px;margin-top:-15px}
+.rail__mark line{stroke-width:1.3;stroke-linecap:round;opacity:.12;transition:opacity .4s}
+.rail__mark line.is-on{opacity:1}
+.rail__mark circle{fill:var(--text)}
+.rail__read{margin-top:20px}
+@media (max-width:900px){
+  .hero{padding:calc(var(--hh) + 20px) 0 64px}
+  .hero__grid{width:min(560px,100% - 40px);grid-template-columns:minmax(0,1fr);gap:30px}
+  .hero__title{writing-mode:horizontal-tb;order:-1;font-size:clamp(30px,8.6vw,40px);letter-spacing:.1em}
+  .hero__title span+span{padding:0 0 0 1em}
+  .disc{max-width:360px;justify-self:center;width:84%}
+  .disc__ring{inset:-14px}
+  .biz__media{max-height:440px}
+  .rail__mark{width:20px;height:20px;left:0;margin-top:-10px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="hd" id="hd">
+  <div class="hd__in">
+    <a class="logo" href="#top" aria-label="株式会社Radia トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3" fill="#A08BFF"/><g stroke-width="1.4" stroke-linecap="round"><path d="M16 9V4M16 28v-5M9 16H4M28 16h-5" stroke="#A08BFF"/><path d="M11 11L7.5 7.5M24.5 24.5L21 21" stroke="#EE8FB4"/><path d="M21 11l3.5-3.5M7.5 24.5L11 21" stroke="#EFD08C"/></g></svg><span class="logo__name">Radia<small>株式会社Radia</small></span></a>
+    <!-- 【確認事項】ロゴは仮デザインです -->
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="gnav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="gnav" id="gnav" aria-label="メインメニュー"><ul><li><a href="#concept">社名のこと</a></li><li><a href="#business">事業内容</a></li><li><a href="#process">進め方</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+  </div>
+</header>
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="rail__line"></div><div class="rail__fill" id="railFill"></div>
+  <svg class="rail__mark" id="railMark" viewBox="-15 -15 30 30"></svg>
+  <span class="rail__read" id="railRead">000°</span>
+</div>
+
+<main id="main">
+
+<section class="hero" id="top" aria-label="メインビジュアル" data-rail>
+  <div class="hero__grid">
+    <div class="disc" data-in="2"><canvas id="heroCanvas" aria-hidden="true"></canvas><span class="disc__ring" aria-hidden="true"></span></div>
+    <div class="hero__side" data-in="3">
+      <p class="hero__en">Radiate from one center.</p>
+      <!-- 【確認事項】リード文はCSVの事業内容を整えた文 -->
+      <p class="t"><span class="nw">株式会社Radiaは、</span><span class="nw">紹介広告やインターネットマーケティングの支援・運用代行、</span><span class="nw">Webサイトの企画・制作・運営、</span><span class="nw">ロゴやパッケージのグラフィックデザインを</span><span class="nw">行う会社です。</span></p>
+      <nav class="rays" aria-label="事業内容">
+        <a href="#ad" style="--c:var(--accent)"><i aria-hidden="true"></i>広告マーケティング</a>
+        <a href="#web" style="--c:var(--rose)"><i aria-hidden="true"></i>Webサイトの企画・制作・運営</a>
+        <a href="#design" style="--c:var(--gold)"><i aria-hidden="true"></i>グラフィックデザイン</a>
+      </nav>
+    </div>
+    <!-- 【確認事項】キャッチコピーは仮案 -->
+    <h1 class="hero__title" data-in="1"><span>魅力を、</span><span>遠くまで放つ。</span></h1>
+  </div>
+  <span class="cue" aria-hidden="true"></span>
+</section>
+
+<section class="sec" id="concept" aria-labelledby="conceptTitle" data-rail>
+  <div class="wrap two">
+    <div class="rv">
+      <div class="sh"><p class="sh__en">Radiate</p><h2 class="sh__ja" id="conceptTitle">社名のこと</h2></div>
+      <!-- 【確認事項】理念文は仮文。社名の解釈はデザイン上のもの -->
+      <p class="statement">ひとつの中心から、<br>魅力を、まっすぐ遠くへ。</p>
+      <p class="p-mute">商品やサービスが選ばれるまでには、いくつもの接点があります。目に留まる広告、詳しく知るためのWebサイト、手に取りたくなるロゴやパッケージ。Radiaはこれらを一社で手がけ、伝えたい魅力という「中心」から、すべてを同じ方向へ揃えていきます。別々に頼むと少しずつずれてしまう言葉や色を、広告からサイト、パッケージまで一貫させられるのが私たちの強みです。</p>
+      <dl class="etym">
+        <dt>radiate</dt><dd>光や熱を、中心から四方へ放つこと。</dd>
+        <dt>radial</dt><dd>ひとつの中心から、放射状に広がるかたち。</dd>
+      </dl>
+    </div>
+    <svg class="fig fig--rad" data-draw viewBox="0 0 440 420" role="img" aria-label="中心にある伝えたい魅力から、広告、Webサイト、デザインの三本の光が放たれている図">
+      <circle class="halo" cx="220" cy="210" r="150"/>
+      <circle class="halo" cx="220" cy="210" r="96" style="stroke-dasharray:2 6"/>
+      <path class="ln r1" pathLength="1" d="M220 210 L220 46"/>
+      <path class="ln r2 d2" pathLength="1" d="M220 210 L362 292"/>
+      <path class="ln r3 d3" pathLength="1" d="M220 210 L78 292"/>
+      <circle class="pop core" cx="220" cy="210" r="9"/>
+      <circle class="pop c1" cx="220" cy="46" r="6"/><circle class="pop c2" cx="362" cy="292" r="6"/><circle class="pop c3" cx="78" cy="292" r="6"/>
+      <text class="lbl" x="220" y="244" text-anchor="middle">伝えたい魅力</text>
+      <text class="lbl c1" x="236" y="40">広告</text>
+      <text class="lbl c2" x="362" y="322" text-anchor="middle">Webサイト</text>
+      <text class="lbl c3" x="78" y="322" text-anchor="middle">デザイン</text>
+    </svg>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true">
+  <div class="ph"><!-- 画像：Unsplash（仮）photo-1561070791-2526d30994b5。自社写真への差し替え推奨 --><img id="bandImg" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&amp;fit=crop&amp;w=1800&amp;q=72" alt="" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></div>
+  <p class="band__cap rv"><span class="nw">言葉も、色も、</span><span class="nw">同じ中心から。</span></p>
+</div>
+
+<section class="sec bizsec" id="business" aria-labelledby="bizTitle" data-rail>
+  <div class="wrap">
+    <div class="sh rv"><p class="sh__en">Services</p><h2 class="sh__ja" id="bizTitle">事業内容</h2></div>
+    <article class="biz rv" style="--c:var(--accent)" id="ad">
+      <div class="ph biz__media"><!-- 画像：Unsplash（仮）photo-1551288049-bebda4e38f71。自社写真への差し替え推奨 --><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1100&amp;q=72" alt="アクセス数などの数値をグラフで表示した分析画面" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></div>
+      <div>
+        <p class="biz__kind">届ける光</p>
+        <h3>広告マーケティング</h3>
+        <p class="biz__en">Advertising &amp; Marketing</p>
+        <!-- 【確認事項】説明文は仮文 -->
+        <p>商品・サービスの認知拡大を目的とした紹介広告事業に加え、インターネットマーケティングの支援と運用代行を行います。数字を見ながら、届け方を整えていきます。</p>
+        <ul class="tags"><li>紹介広告</li><li>ネットマーケティング支援</li><li>運用代行</li></ul>
+      </div>
+    </article>
+    <article class="biz rv" style="--c:var(--rose)" id="web">
+      <div class="ph biz__media"><!-- 画像：Unsplash（仮）photo-1572044162444-ad60f128bdea。自社写真への差し替え推奨 --><img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&amp;fit=crop&amp;w=1100&amp;q=72" alt="ノートパソコンとペンタブレットで制作作業をする手元と色見本" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></div>
+      <div>
+        <p class="biz__kind">伝える光</p>
+        <h3>Webサイトの企画・制作・運営</h3>
+        <p class="biz__en">Web Production</p>
+        <!-- 【確認事項】説明文は仮文 -->
+        <p>Webサイトの企画から制作、公開後の運営・管理までを担います。つくって終わりではなく、育てていくサイトを目指します。</p>
+        <ul class="tags"><li>企画</li><li>制作</li><li>運営・管理</li></ul>
+      </div>
+    </article>
+    <article class="biz rv" style="--c:var(--gold)" id="design">
+      <div class="ph biz__media"><!-- 画像：Unsplash（仮）photo-1561070791-36c11767b26a。自社写真への差し替え推奨 --><img src="https://images.unsplash.com/photo-1561070791-36c11767b26a?auto=format&amp;fit=crop&amp;w=1100&amp;q=72" alt="タブレットに表示したデザイン案と、並べた色見本" loading="lazy" onerror="this.parentNode.classList.add('is-fallback');this.remove()"></div>
+      <div>
+        <p class="biz__kind">かたちの光</p>
+        <h3>グラフィックデザイン</h3>
+        <p class="biz__en">Logo &amp; Package</p>
+        <!-- 【確認事項】説明文は仮文 -->
+        <p>プロダクトのロゴやパッケージなどのグラフィックをデザインします。商品の個性を、ひと目で伝わる形と色に落とし込みます。</p>
+        <ul class="tags"><li>ロゴ</li><li>パッケージ</li><li>プロダクトのグラフィック</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="process" aria-labelledby="procTitle" data-rail>
+  <div class="wrap">
+    <div class="sh rv"><p class="sh__en">Process</p><h2 class="sh__ja" id="procTitle">進め方</h2></div>
+    <!-- 【確認事項】進め方は一般的な流れとして作成した仮案 -->
+    <!-- 実際の手順なので番号を使用 --><ol class="steps" style="--n:4"><li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">01</span><h3>中心を見つける</h3><p>商品・サービスと届けたい相手について伺い、伝えるべき中心を言葉にします。</p></li><li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">02</span><h3>向きを決める</h3><p>広告・Webサイト・デザインのうち、何から整えるかを決めます。</p></li><li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">03</span><h3>かたちにする</h3><p>制作物をつくり、広告やサイトを公開します。</p></li><li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">04</span><h3>遠くへ育てる</h3><p>反応や数字を見ながら、運用と改善を続けます。</p></li></ol>
+    <p class="loop-note rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/></svg>改善の結果は、また最初の「中心」へ戻して見直します。</p>
+  </div>
+</section>
+
+<section class="sec msgsec" id="message" aria-labelledby="msgTitle" data-rail>
+  <div class="wrap">
+    <!-- 【確認事項】代表メッセージは草案です。ご本人の確認・修正を経て公開してください。 -->
+<div class="msg rv">
+  <h2 class="msg__title" id="msgTitle">中心がぶれなければ、<br>光はまっすぐ届く。</h2>
+  <div class="msg__body" tabindex="0" aria-label="代表メッセージ本文"><p class="first">いい商品なのに、伝わり方がばらばら。そんなもったいなさを、何度も目にしてきました。</p><p>広告とWebサイトとパッケージを別々につくると、言葉も色も少しずつずれていきます。受け取る人にとっては、それが小さな違和感になります。</p><p>Radiaは、伝えたい魅力という中心を最初にはっきりさせ、そこから広告・Web・デザインのすべてを同じ方向へ揃えます。</p><p>つくって終わりにせず、数字と反応を見ながら育てていく。ひとつの中心から放った光が、遠くの誰かに届くまで、伴走します。</p>
+    <p class="msg__sign"><small>代表取締役</small>渡邉 美香<!-- 【確認事項】署名の役職名は仮置き。氏名は会社概要に記載しています --></p>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="sec cosec" id="company" aria-labelledby="coTitle" data-rail>
+  <div class="wrap co">
+    <div class="sh rv"><p class="sh__en">Company</p><h2 class="sh__ja" id="coTitle">会社概要</h2></div>
+    <dl class="profile rv">
+<div><dt>商号</dt><dd>株式会社Radia</dd></div>
+<div><dt>代表者</dt><dd>渡邉 美香</dd></div>
+<div><dt>所在地</dt><dd>〒213-0001　神奈川県川崎市高津区溝口二丁目17番27号<!-- 【確認事項】郵便番号を補記 --></dd></div>
+<div><dt>事業内容</dt><dd><ul><li>広告マーケティング業（商品、サービスの認知拡大を目的とした紹介広告事業及びインターネットマーケティング支援、運用代行）</li><li>Webサイトの企画、制作、運営及び管理など</li><li>プロダクトのグラフィックデザイン（ロゴ、パッケージなど）</li></ul></dd></div>
+<!-- 【確認事項】設立・資本金などはCSVに無いため未掲載。確定後にコメントを外して入力
+<div><dt>設立</dt><dd></dd></div>
+<div><dt>資本金</dt><dd></dd></div>
+<div><dt>従業員数</dt><dd></dd></div>
+-->
+</dl>
+  </div>
+</section>
+
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__in">
+      <div>
+        <a class="logo" href="#top" aria-label="株式会社Radia トップへ"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3" fill="#A08BFF"/><g stroke-width="1.4" stroke-linecap="round"><path d="M16 9V4M16 28v-5M9 16H4M28 16h-5" stroke="#A08BFF"/><path d="M11 11L7.5 7.5M24.5 24.5L21 21" stroke="#EE8FB4"/><path d="M21 11l3.5-3.5M7.5 24.5L11 21" stroke="#EFD08C"/></g></svg><span class="logo__name">Radia<small>株式会社Radia</small></span></a>
+        <p class="ft__tag">魅力を、遠くまで放つ。</p>
+      </div>
+      <nav aria-label="フッターメニュー"><ul><li><a href="#concept">社名のこと</a></li><li><a href="#business">事業内容</a></li><li><a href="#process">進め方</a></li><li><a href="#message">代表メッセージ</a></li><li><a href="#company">会社概要</a></li></ul></nav>
+    </div>
+    <p class="copy">&copy; <span id="year">2026</span> 株式会社Radia</p>
+  </div>
+</footer>
+<script>
+(function(){
+'use strict';
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var yr = document.getElementById('year'); if (yr) yr.textContent = new Date().getFullYear();
+requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.body.classList.add('is-loaded'); }); });
+/* menu */
+var btn = document.getElementById('menuBtn'), nav = document.getElementById('gnav');
+function setMenu(open){
+  btn.setAttribute('aria-expanded', String(open));
+  btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  nav.classList.toggle('is-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open){ var f = nav.querySelector('a'); if (f) f.focus(); }
+}
+btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+nav.addEventListener('click', function(e){ if (e.target.closest('a') && nav.classList.contains('is-open')) setMenu(false); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('is-open')){ setMenu(false); btn.focus(); } });
+matchMedia('(min-width:901px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+/* reveal */
+(function(){
+  var targets = document.querySelectorAll('.rv, [data-draw], .steps');
+  function on(el){ el.classList.add(el.hasAttribute('data-draw') ? 'is-drawn' : 'is-in'); if (el._onIn) el._onIn(); }
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if (!en.isIntersecting) return; on(en.target); io.unobserve(en.target); }); }, {threshold:.18, rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(function(t){ io.observe(t); });
+  } else { targets.forEach(on); }
+})();
+/* header + rail */
+var hd = document.getElementById('hd'), rail = document.getElementById('rail'), railFill = document.getElementById('railFill');
+var railSecs = Array.prototype.slice.call(document.querySelectorAll('[data-rail]')), ticks = [], navLinks = Array.prototype.slice.call(nav.querySelectorAll('a'));
+var bandImg = document.getElementById('bandImg');
+function layoutTicks(){
+  ticks.forEach(function(t){ t.el.remove(); }); ticks = [];
+  var max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  railSecs.forEach(function(s, i){
+    var p = Math.min(1, Math.max(0, (s.getBoundingClientRect().top + scrollY) / max)), el = document.createElement('i');
+    el.className = 'rail__tick'; el.style.top = (p*100) + '%'; if (rail) rail.appendChild(el); ticks.push({p:p, el:el, i:i});
+  });
+  if (window.onTicks) window.onTicks(ticks);
+}
+function progress(){ var max = document.documentElement.scrollHeight - innerHeight; return max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0; }
+var ticking = false;
+function onScroll(){
+  hd.classList.toggle('is-scrolled', scrollY > 40);
+  var p = progress();
+  if (railFill) railFill.style.transform = 'scaleY(' + p + ')';
+  var passed = -1;
+  ticks.forEach(function(t){ var on = p >= t.p - .002; t.el.classList.toggle('is-passed', on); if (on) passed = t.i; });
+  if (window.onRail) window.onRail(p, passed);
+  var mid = innerHeight * .45, cur = null;
+  railSecs.forEach(function(s){ if (s.getBoundingClientRect().top <= mid) cur = s; });
+  navLinks.forEach(function(a){ a.setAttribute('aria-current', String(!!cur && a.getAttribute('href') === '#' + cur.id)); });
+  if (bandImg && !reduce){
+    var r = bandImg.parentElement.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < innerHeight){ var k = (r.top + r.height/2 - innerHeight/2) / innerHeight; bandImg.style.transform = 'translateY(' + (k * -40).toFixed(1) + 'px)'; }
+  }
+  ticking = false;
+}
+addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+addEventListener('load', function(){ layoutTicks(); onScroll(); });
+var rrt; addEventListener('resize', function(){ clearTimeout(rrt); rrt = setTimeout(function(){ layoutTicks(); onScroll(); }, 150); });
+layoutTicks(); onScroll();
+/* canvas boilerplate */
+function canvasHero(cv, api){
+  if (!cv || !cv.getContext) return null;
+  var ctx = cv.getContext('2d'), W = 0, H = 0, running = false, visible = true, raf = 0, t0 = performance.now(), lastW = -1;
+  function resize(force){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var nw = cv.clientWidth, nh = cv.clientHeight;
+    if (!force && nw === lastW && Math.abs(nh - H) < 120) return;   // ignore mobile URL-bar height jitter
+    W = nw; H = nh; lastW = nw;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    api.build(ctx, W, H, W < 760);
+  }
+  function loop(now){ if (!running) return; api.draw((now - t0) / 1000); raf = requestAnimationFrame(loop); }
+  function start(){ if (running || reduce || !visible || document.hidden) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop(){ running = false; cancelAnimationFrame(raf); }
+  function still(){ api.draw(api.stillT || 99); }
+  resize(true);
+  if (reduce) still(); else start();
+  var rt; addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ resize(false); if (!running) still(); }, 150); });
+  if ('IntersectionObserver' in window){ new IntersectionObserver(function(en){ visible = en[0].isIntersecting; visible ? start() : stop(); }).observe(cv.parentElement); }
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  return { still: function(){ if (!running) still(); }, isRunning: function(){ return running; } };
+}
+/* ===== site ===== */
+/* rail: a radiant mark gains one ray per 1/12 of the page */
+var mark = document.getElementById('railMark'), read = document.getElementById('railRead'), rays = [];
+var RC = ['#A08BFF', '#EE8FB4', '#EFD08C'];
+for (var i = 0; i < 12; i++){
+  var a = i / 12 * Math.PI * 2 - Math.PI/2, l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  l.setAttribute('x1', (Math.cos(a)*5).toFixed(2)); l.setAttribute('y1', (Math.sin(a)*5).toFixed(2));
+  l.setAttribute('x2', (Math.cos(a)*13).toFixed(2)); l.setAttribute('y2', (Math.sin(a)*13).toFixed(2));
+  l.setAttribute('stroke', RC[i % 3]); mark.appendChild(l); rays.push(l);
+}
+var c0 = document.createElementNS('http://www.w3.org/2000/svg', 'circle'); c0.setAttribute('r', '2.6'); mark.appendChild(c0);
+window.onRail = function(p){
+  mark.style.top = (p*100) + '%'; read.style.top = (p*100) + '%';
+  var n = Math.round(p * 12); rays.forEach(function(r, i){ r.classList.toggle('is-on', i < Math.max(1, n)); });
+  read.textContent = String(Math.round(p*360)).padStart(3, '0') + '°';
+};
+onScroll();
+
+/* hero canvas (inside the disc): three colours of light radiate from one point */
+var W, H, ctx, cx, cy, R, beams = [], sparks = [];
+var COL = ['160,139,255', '238,143,180', '239,208,140'];
+canvasHero(document.getElementById('heroCanvas'), {
+  stillT: 20,
+  build: function(c, w, h, m){ ctx = c; W = w; H = h; cx = w/2; cy = h/2; R = Math.min(w, h)/2; beams = []; sparks = [];
+    var n = m ? 42 : 66;
+    for (var i = 0; i < n; i++) beams.push({a:i / n * Math.PI * 2 + (Math.random() - .5) * .05, c:i % 3, len:.55 + Math.random() * .45, d:Math.random() * 1.2, w:.6 + Math.random() * 1.2});
+    for (var j = 0; j < (m ? 40 : 70); j++) sparks.push({b:Math.floor(Math.random() * n), s:Math.random(), v:.06 + Math.random() * .12});
+  },
+  draw: function(t){
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = '#0c0a14'; ctx.fillRect(0, 0, W, H);
+    var rot = reduce ? 0 : t * .03;
+    ctx.globalCompositeOperation = 'lighter';
+    // expanding rings
+    for (var k = 0; k < 3; k++){
+      var ph = ((t * .18 + k / 3) % 1);
+      ctx.strokeStyle = 'rgba(' + COL[k] + ',' + (.22 * (1 - ph)).toFixed(3) + ')'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(cx, cy, R * (.12 + ph * .9), 0, 6.283); ctx.stroke();
+    }
+    beams.forEach(function(b){
+      var k = Math.min(1, Math.max(0, (t - .3 - b.d) / 1.8)), e = 1 - Math.pow(1 - k, 3);
+      if (e <= 0) return;
+      var pulse = .75 + .25 * Math.sin(t * 1.4 + b.a * 3);
+      var L = R * b.len * e * pulse, a = b.a + rot;
+      var x2 = cx + Math.cos(a) * L, y2 = cy + Math.sin(a) * L;
+      var g = ctx.createLinearGradient(cx, cy, x2, y2);
+      g.addColorStop(0, 'rgba(' + COL[b.c] + ',.0)'); g.addColorStop(.25, 'rgba(' + COL[b.c] + ',.55)'); g.addColorStop(1, 'rgba(' + COL[b.c] + ',0)');
+      ctx.strokeStyle = g; ctx.lineWidth = b.w;
+      ctx.beginPath(); ctx.moveTo(cx + Math.cos(a) * R * .06, cy + Math.sin(a) * R * .06); ctx.lineTo(x2, y2); ctx.stroke();
+    });
+    sparks.forEach(function(s){
+      var b = beams[s.b], pos = reduce ? s.s : (s.s + t * s.v) % 1, a = b.a + rot, d = R * (.08 + pos * .9);
+      ctx.fillStyle = 'rgba(' + COL[b.c] + ',' + (.9 * (1 - pos)).toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(cx + Math.cos(a) * d, cy + Math.sin(a) * d, 1.3, 0, 6.283); ctx.fill();
+    });
+    var cg = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * .22);
+    cg.addColorStop(0, 'rgba(255,250,255,.95)'); cg.addColorStop(.25, 'rgba(220,210,255,.35)'); cg.addColorStop(1, 'rgba(160,139,255,0)');
+    ctx.fillStyle = cg; ctx.beginPath(); ctx.arc(cx, cy, R * .22, 0, 6.283); ctx.fill();
+    ctx.globalCompositeOperation = 'source-over';
+  }
+});
+})();
+</script>
+</body>
+</html>
